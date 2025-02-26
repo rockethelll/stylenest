@@ -2,3 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@keyframes navbar-menu {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes navbar-menu-close {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-navbar-menu {
+  animation: navbar-menu 0.3s ease-in-out;
+}
+
+.animate-navbar-menu-close {
+  animation: navbar-menu-close 0.3s ease-in-out forwards;
+}
