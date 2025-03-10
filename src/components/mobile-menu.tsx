@@ -48,14 +48,14 @@ const MobileMenuNav = ({ links }: MobileMenuNavProps) => {
           alt="Stylenest logo"
           width={100}
           height={32}
-          className="w-[120px]"
+          className="h-9 w-[120px]"
         />
         <button
           onClick={toggleMenu}
           aria-label="Close Mobile Menu"
           aria-expanded={isOpen}
         >
-          <X size={24} />
+          <X size={20} />
         </button>
       </div>
 
@@ -64,7 +64,7 @@ const MobileMenuNav = ({ links }: MobileMenuNavProps) => {
           <li key={name} className="py-2">
             <Link
               href={href}
-              className="rounded px-0.5 font-medium text-secondary hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12]"
+              className="rounded px-0.5 font-medium text-secondary hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] text-sm"
             >
               {name}
             </Link>
