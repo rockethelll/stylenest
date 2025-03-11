@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 
-import Navbar from '@/components/navbar';
+import Footer from '@/components/footer/footer';
+import Navbar from '@/components/navbar/navbar';
 import SignatureGreatfrontend from '@/components/signature-greatfrontend';
 
 import './globals.css';
-import Footer from '@/components/footer';
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
@@ -28,8 +28,8 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
-        <SignatureGreatfrontend />
         <Footer />
+        <SignatureGreatfrontend />
       </body>
     </html>
   );

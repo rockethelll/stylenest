@@ -1,6 +1,6 @@
 'use client';
 
-import logo from '../../public/logo.svg';
+import logo from '../../../public/logo.svg';
 import clsx from 'clsx';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
@@ -36,7 +36,7 @@ const MobileMenuNav = ({ links }: MobileMenuNavProps) => {
   const menuContent = (
     <nav
       className={clsx(
-        'fixed inset-0 z-[1030] max-w-[400px] bg-white px-4 py-6 lg:hidden',
+        'fixed inset-0 z-[1030] max-w-[400px] bg-white px-4 py-6 lg:hidden shadow-lg',
         'flex flex-col',
         isClosing ? 'animate-navbar-menu-close' : 'animate-navbar-menu',
       )}
@@ -59,7 +59,7 @@ const MobileMenuNav = ({ links }: MobileMenuNavProps) => {
         </button>
       </div>
 
-      <ul className="flex flex-col gap-y-2 pt-6">
+      <ul className="flex flex-col pt-6 gap-y-2">
         {links.map(({ name, href }) => (
           <li key={name} className="py-2">
             <Link
