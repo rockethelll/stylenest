@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/navbar/navbar';
 
 const resizeWindow = (width: number) => {
   global.innerWidth = width;

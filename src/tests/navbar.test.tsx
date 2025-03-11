@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/navbar/navbar';
 
 describe('Navbar', () => {
   it('should render the Stylenest logo', () => {
