@@ -3,6 +3,7 @@
 import Toast from '../toast/toast';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
+import clsx from 'clsx';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -61,14 +62,23 @@ const FooterForm = () => {
         <input
           type="email"
           id="email"
-          className="rounded px-[14px] py-[10px] border border-neutral-200 bg-neutral-50 text-neutral-900 h-10 overflow-hidden text-ellipsis transition-shadow focus:outline-none focus-within:rounded"
+          className={clsx(
+            'rounded px-[14px] py-[10px] border bg-neutral-50 text-neutral-900 h-10',
+            'overflow-hidden text-ellipsis transition-shadow focus:outline-none focus-within:rounded',
+            {
+              'border-red-600': errors.email,
+              'border-neutral-200': !errors.email,
+              'input-error': errors.email,
+              'input-focus': !errors.email,
+            },
+          )}
           placeholder="Enter your email"
           aria-required="true"
           aria-invalid="false"
           autoComplete="email"
           {...register('email')}
         />
-        {errors.email?.message && (
+        {errors.email && (
           <div className="text-sm text-red-600">{errors.email.message}</div>
         )}
         <button

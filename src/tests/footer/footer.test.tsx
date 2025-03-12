@@ -1,6 +1,10 @@
 import { render, screen } from '@testing-library/react';
 
-import { shopCategoriesLinks, shopCollectionsLinks } from '@/lib/constants';
+import {
+  footerSocialsLinks,
+  shopCategoriesLinks,
+  shopCollectionsLinks,
+} from '@/lib/constants';
 
 import Footer from '@/components/footer/footer';
 
@@ -41,13 +45,15 @@ describe('Footer', () => {
     });
   });
 
-  it.skip('renders the footer form', () => {
+  it('renders the footer form', () => {
     const form = screen.getByRole('form');
     expect(form).toBeInTheDocument();
   });
 
-  it.skip('renders social media links', () => {
-    const socials = screen.getByTestId('footer-socials');
-    expect(socials).toBeInTheDocument();
+  it('renders social media links', () => {
+    footerSocialsLinks.forEach((link) => {
+      const linkElement = screen.getByTestId(link.name + 'Icon');
+      expect(linkElement).toBeInTheDocument();
+    });
   });
 });
