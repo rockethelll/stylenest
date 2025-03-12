@@ -3,8 +3,8 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import Navbar from '@/components/navbar/navbar';
 
 const resizeWindow = (width: number) => {
-  global.innerWidth = width;
-  global.dispatchEvent(new Event('resize'));
+  window.innerWidth = width;
+  window.dispatchEvent(new Event('resize'));
 };
 
 describe('Feature: Mobile Menu', () => {

@@ -56,7 +56,7 @@ describe('FooterForm', () => {
 
   it('should submit form successfully', async () => {
     // Mock successful response
-    (axios.post as any).mockResolvedValueOnce({
+    vi.mocked(axios.post).mockResolvedValueOnce({
       status: 200,
       data: { message: 'Successfully subscribed!' },
     });

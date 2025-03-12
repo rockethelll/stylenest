@@ -4,7 +4,7 @@ import {
   footerSocialsLinks,
   shopCategoriesLinks,
   shopCollectionsLinks,
-} from '@/lib/constants';
+} from '@/lib/links';
 
 import Footer from '@/components/footer/footer';
 

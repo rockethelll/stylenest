@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { footerSocialsLinks } from '@/lib/constants';
+import { footerSocialsLinks } from '@/lib/links';
 
 import { ClientIcon } from './footer-icons';
 

@@ -1,5 +1,7 @@
 'use client';
 
-export const ClientIcon = ({ Icon }: { Icon: React.ElementType }) => {
+import { ElementType } from 'react';
+
+export const ClientIcon = ({ Icon }: { Icon: ElementType }) => {
   return <Icon />;
 };

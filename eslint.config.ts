@@ -1,16 +1,16 @@
-import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import pluginReact from 'eslint-plugin-react';
+import globals from 'globals';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-    ignores: ['node_modules', 'dist', 'build'],
-  },
-  {
+    ignores: ['node_modules', 'build'],
     languageOptions: {
+      parser: tsParser,
       globals: {
         ...globals.browser,
         suite: true,
@@ -28,15 +28,27 @@ export default [
       },
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
     },
     settings: {
       react: {
         version: 'detect',
       },
     },
+    plugins: {
+      '@typescript-eslint': tseslint,
+      react: pluginReact,
+    },
+    rules: {
+      ...pluginJs.configs.recommended.rules,
+      ...tseslint.configs.recommended.rules,
+      ...pluginReact.configs.recommended.rules,
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
+    },
   },
-  pluginJs.configs.recommended, // Recommandations JavaScript
-  ...[tseslint.configs.recommended], // Recommandations TypeScript
-  pluginReact.configs.flat.recommended, // Recommandations React
-  pluginReact.configs.flat['jsx-runtime'], // Recommandations React JSX Runtime
-];  
+];
