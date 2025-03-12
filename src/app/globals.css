@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -30,4 +30,22 @@ body {
 
 .animate-navbar-menu-close {
   animation: navbar-menu-close 0.3s ease-in-out forwards;
+}
+
+input#email:focus-within {
+  box-shadow:
+    0px 0px 0px 1px #444ce7,
+    0px 1px 2px 0px rgba(16, 24, 40, 0.05),
+    0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
 }

@@ -6,7 +6,7 @@ import { ClientIcon } from './footer-icons';
 
 export const FooterSocials = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_auto] gap-4 pt-8 border-t border-neutral-200 border-1">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_auto] gap-4 pt-8 border-t border-neutral-200">
       <span className="text-neutral-500">
         &copy; {new Date().getFullYear()} StyleNest, Inc. All rights reserved.
       </span>

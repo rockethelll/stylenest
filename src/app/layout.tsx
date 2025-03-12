@@ -30,6 +30,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <SignatureGreatfrontend />
+        <div id="toast"></div>
       </body>
     </html>
   );
