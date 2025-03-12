@@ -64,7 +64,7 @@ const MobileMenuNav = ({ links }: MobileMenuNavProps) => {
           <li key={name} className="py-2">
             <Link
               href={href}
-              className="rounded px-0.5 font-medium text-secondary hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] text-sm"
+              className="rounded px-0.5 font-medium text-neutral-600 hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] text-sm"
             >
               {name}
             </Link>

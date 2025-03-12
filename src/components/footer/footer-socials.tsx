@@ -14,7 +14,7 @@ export const FooterSocials = () => {
         {footerSocialsLinks.map((link) => (
           <Link
             href="/"
-            className="w-6 h-6 transition-all duration-300 text-neutral-400 hover:scale-150 hover:text-gray-600"
+            className="w-6 h-6 transition-all duration-300 text-neutral-400 hover:scale-150 hover:text-gray-600 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] rounded"
             key={link.name}
             suppressHydrationWarning
           >

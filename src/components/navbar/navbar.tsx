@@ -19,12 +19,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <header
-      className={clsx(
-        'z-sticky sticky top-0 h-[68px] py-3 lg:h-auto xl:px-0',
-        'flex items-center justify-between gap-4 lg:gap-20',
-      )}
-    >
+    <header className="z-sticky sticky top-0 h-[68px] py-3 lg:h-auto xl:px-0 flex items-center justify-between gap-4 lg:gap-20">
       <div className="w-[163]">
         <Image
           src={logo}
@@ -40,10 +35,7 @@ const Navbar = () => {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className={clsx(
-                  'rounded px-0.5 font-medium text-secondary',
-                  'hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] transition-colors',
-                )}
+                className="rounded px-0.5 text-neutral-600 font-medium text-secondary hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] transition-colors"
               >
                 {link.name}
               </Link>

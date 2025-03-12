@@ -18,10 +18,7 @@ const FooterLinks = ({ label, links }: FooterLinksProps) => {
           <li key={link.name}>
             <Link
               href={link.href}
-              className={clsx(
-                'rounded px-0.5 font-medium text-secondary',
-                'hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] transition-colors',
-              )}
+              className="rounded px-0.5 font-medium text-neutral-600 hover:text-neutral-900 focus:text-neutral-900 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] transition-colors"
             >
               {link.name}
             </Link>
