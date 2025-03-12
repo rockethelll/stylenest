@@ -31,7 +31,7 @@ const Toast = ({ status }: { status: StatusProps }) => {
   }
 
   const content = (
-    <div className="fixed z-10 top-20 right-[50%] translate-x-[50%] text-sm animate-[fadeInOut_3s_ease-in-out] min-w-[360px]">
+    <div className="fixed z-10 top-6 right-[50%] translate-x-[50%] text-sm animate-[fadeInOut_3s_ease-in-out] min-w-[360px]">
       {status.error ? (
         <ErrorToast status={status} />
       ) : (

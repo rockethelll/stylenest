@@ -19,7 +19,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <header className="z-sticky sticky top-0 h-[68px] py-3 lg:h-auto xl:px-0 flex items-center justify-between gap-4 lg:gap-20">
+    <header className="z-10 sticky top-0 h-[68px] py-3 lg:h-auto xl:px-0 flex items-center justify-between gap-4 lg:gap-20 bg-white/80 backdrop-blur-sm">
       <div className="w-[163]">
         <Image
           src={logo}

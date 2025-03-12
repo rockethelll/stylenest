@@ -52,38 +52,42 @@ const FooterForm = () => {
     <>
       <Toast status={status} />
       <form
-        className="flex flex-col w-full gap-4"
+        className="flex flex-col w-full gap-4 sm:flex-row lg:justify-end"
         aria-label="Newsletter subscription form"
         onSubmit={handleSubmit(onSubmit)}
       >
         <label htmlFor="email" id="email" className="sr-only">
           Email address
         </label>
-        <input
-          type="email"
-          id="email"
-          className={clsx(
-            'rounded px-[14px] py-[10px] border bg-neutral-50 text-neutral-900 h-10',
-            'overflow-hidden text-ellipsis transition-shadow focus:outline-none focus-within:rounded',
-            {
-              'border-red-600': errors.email,
-              'border-neutral-200': !errors.email,
-              'input-error': errors.email,
-              'input-focus': !errors.email,
-            },
+        <div className="flex flex-col sm:flex-1 lg:max-w-[280px]">
+          <input
+            type="email"
+            id="email"
+            className={clsx(
+              'rounded px-[14px] py-[10px] border bg-neutral-50 text-neutral-900 h-10',
+              'overflow-hidden text-ellipsis transition-shadow focus:outline-none focus-within:rounded',
+              {
+                'border-red-600': errors.email,
+                'border-neutral-200': !errors.email,
+                'input-error': errors.email,
+                'input-focus': !errors.email,
+              },
+            )}
+            placeholder="Enter your email"
+            aria-required="true"
+            aria-invalid="false"
+            autoComplete="email"
+            {...register('email')}
+          />
+          {errors.email && (
+            <div className="mt-1 text-sm text-red-600">
+              {errors.email.message}
+            </div>
           )}
-          placeholder="Enter your email"
-          aria-required="true"
-          aria-invalid="false"
-          autoComplete="email"
-          {...register('email')}
-        />
-        {errors.email && (
-          <div className="text-sm text-red-600">{errors.email.message}</div>
-        )}
+        </div>
         <button
           type="submit"
-          className="flex items-center justify-center h-10 text-white bg-indigo-700 rounded shadow-lg text-sm font-semibold hover:bg-indigo-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] transition-colors cursor-pointer disabled:cursor-not-allowed disabled:bg-neutral-100 disabled:text-neutral-400"
+          className="flex items-center justify-center h-10 text-white bg-indigo-700 rounded shadow-lg text-sm font-semibold hover:bg-indigo-800 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-600/[.12] transition-colors cursor-pointer disabled:cursor-not-allowed disabled:bg-neutral-100 disabled:text-neutral-400 md:w-24 sm:px-3.5"
           aria-label="Subscribe to newsletter"
           disabled={isSubmitting}
         >

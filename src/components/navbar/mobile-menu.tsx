@@ -36,7 +36,7 @@ const MobileMenuNav = ({ links }: MobileMenuNavProps) => {
   const menuContent = (
     <nav
       className={clsx(
-        'fixed inset-0 z-[1030] max-w-[400px] bg-white px-4 py-6 lg:hidden shadow-lg',
+        'fixed inset-0 z-[1030] max-w-[400px] bg-white px-4 py-6 lg:hidden shadow-2xl',
         'flex flex-col',
         isClosing ? 'animate-navbar-menu-close' : 'animate-navbar-menu',
       )}
