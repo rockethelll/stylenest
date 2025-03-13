@@ -9,7 +9,7 @@ import { FooterSocials } from './footer-socials';
 
 const Footer = () => {
   return (
-    <footer className="grid gap-12 px-4 py-12 mt-auto bg-white">
+    <footer className="grid gap-12 px-4 py-24 mt-auto bg-white">
       <div className="flex flex-col gap-8 lg:flex-row lg:justify-between">
         <div className="flex flex-col gap-2 lg:w-full">
           <h2 className="text-xl font-semibold">Join our newsletter</h2>

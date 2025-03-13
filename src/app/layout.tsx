@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 
 import Footer from '@/components/footer/footer';
-// import Navbar from '@/components/navbar/navbar';
+import Navbar from '@/components/navbar/navbar';
 import SignatureGreatfrontend from '@/components/signature-greatfrontend';
 
 import './globals.css';
@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${notoSans.className} antialiased min-h-screen bg-gradient-custom p-4 flex flex-col max-w-[1280px] mx-auto`}
       >
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
         <Footer />
         <SignatureGreatfrontend />
